@@ -9,7 +9,7 @@
 
 ## LoadManagers: AddonLoader
 ## X-LoadOn-Always: delayed
-## SavedVariablesPerCharacter: useGuildFunds, VendorAssistantDB
+## SavedVariablesPerCharacter: VendorAssistantDB
 ## OptionalDeps: Ace3
 
 Libs\LibStub\LibStub.lua

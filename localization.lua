@@ -91,18 +91,18 @@ localization.status = {
 }
 
 localization.usage = {
-    enUS = "Usage:\n/sva guild - Toggle guild repairs to enable/disable\n/sva status - Show the current status of guild repairs",
-    enGB = "Usage:\n/sva guild - Toggle guild repairs to enable/disable\n/sva status - Show the current status of guild repairs",
-    frFR = "Usage:\n/sva guild - Basculer les réparations de guilde pour activer/désactiver\n/sva status - Afficher l'état actuel des réparations de guilde",
-    deDE = "Verwendungszweck:\n/sva guild - Gildenreparaturen aktivieren/deaktivieren\n/sva status - Zeigt den aktuellen Status der Gildenreparaturen an",
-    itIT = "Utilizzo:\n/sva guild - Abilita/disabilita le riparazioni di gilda\n/sva status - Mostra lo stato attuale delle riparazioni della gilda",
-    koKR = "용법:\n/sva guild - 길드 수리를 활성화/비활성화로 전환\n/sva status - 길드 수리 현황 표시",
-    zhCN = "用法：\n/sva guild - 切换公会维修以启用/禁用\n/sva status - 显示公会维修的当前状态",
-    zhTW = "用法：\n/sva guild - 切換公會維修以啟用/禁用\n/sva status - 顯示公會維修的當前狀態",
-    ruRU = "Применение:\n/sva guild - Переключите ремонт гильдии, чтобы включить / отключить\n/sva status - Показать текущий статус ремонта гильдии",
-    esES = "Uso:\n/sva guild - Alternar las reparaciones del gremio para habilitar/deshabilitar\n/sva status - Mostrar el estado actual de las reparaciones del gremio",
-    esMX = "Uso:\n/sva guild - Alternar las reparaciones del gremio para habilitar/deshabilitar\n/sva status - Mostrar el estado actual de las reparaciones del gremio",
-    ptBR = "Uso:\n/sva guild - Alternar reparos de guilda para habilitar/desabilitar\n/sva status - Mostrar o status atual dos reparos da guilda",
+    enUS = "Usage:\n/va guild - Toggle guild repairs to enable/disable\n/va status - Show the current status of guild repairs",
+    enGB = "Usage:\n/va guild - Toggle guild repairs to enable/disable\n/va status - Show the current status of guild repairs",
+    frFR = "Usage:\n/va guild - Basculer les réparations de guilde pour activer/désactiver\n/va status - Afficher l'état actuel des réparations de guilde",
+    deDE = "Verwendungszweck:\n/va guild - Gildenreparaturen aktivieren/deaktivieren\n/va status - Zeigt den aktuellen Status der Gildenreparaturen an",
+    itIT = "Utilizzo:\n/va guild - Abilita/disabilita le riparazioni di gilda\n/va status - Mostra lo stato attuale delle riparazioni della gilda",
+    koKR = "용법:\n/va guild - 길드 수리를 활성화/비활성화로 전환\n/va status - 길드 수리 현황 표시",
+    zhCN = "用法：\n/va guild - 切换公会维修以启用/禁用\n/va status - 显示公会维修的当前状态",
+    zhTW = "用法：\n/va guild - 切換公會維修以啟用/禁用\n/va status - 顯示公會維修的當前狀態",
+    ruRU = "Применение:\n/va guild - Переключите ремонт гильдии, чтобы включить / отключить\n/va status - Показать текущий статус ремонта гильдии",
+    esES = "Uso:\n/va guild - Alternar las reparaciones del gremio para habilitar/deshabilitar\n/va status - Mostrar el estado actual de las reparaciones del gremio",
+    esMX = "Uso:\n/va guild - Alternar las reparaciones del gremio para habilitar/deshabilitar\n/va status - Mostrar el estado actual de las reparaciones del gremio",
+    ptBR = "Uso:\n/va guild - Alternar reparos de guilda para habilitar/desabilitar\n/va status - Mostrar o status atual dos reparos da guilda",
 }
 
 localization.useTrue = {
