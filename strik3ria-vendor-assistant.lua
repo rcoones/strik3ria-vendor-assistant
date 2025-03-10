@@ -161,6 +161,6 @@ function VendorAssistant:SlashCommand(msg)
             self:Usage()
         end
     else
-        Settings.OpenToCategory("VendorAssistant")
+        Settings.OpenToCategory(self.optionsFrame.name)
     end
 end
