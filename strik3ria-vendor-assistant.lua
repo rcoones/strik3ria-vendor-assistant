@@ -20,9 +20,8 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ]]
-local addonName, localization = ...
-
 VendorAssistant = LibStub("AceAddon-3.0"):NewAddon("VendorAssistant", "AceConsole-3.0", "AceEvent-3.0")
+local L = LibStub("AceLocale-3.0"):GetLocale("VendorAssistant")
 
 local options = {
     name = "Vendor Assistant",
@@ -94,7 +93,7 @@ function VendorAssistant:MERCHANT_SHOW()
         end
     end
     if totalPrice ~= 0 then
-        self:Print(localization.vendor[localization.locale]..C_CurrencyInfo.GetCoinTextureString(totalPrice))
+        self:Print(L["Items were sold for "]..C_CurrencyInfo.GetCoinTextureString(totalPrice))
     end
 
     -- Auto Repair
@@ -114,14 +113,14 @@ function VendorAssistant:MERCHANT_SHOW()
                 if (amount >= repairAllCost) then
                     RepairAllItems(true);
                     guildRepairedItems = true
-                    self:Print(localization.guild[localization.locale]..costTextureString)
+                    self:Print(L["Equipment has been repaired by your Guild for "]..costTextureString)
                 end
             end
 
             -- Use own funds
             if (repairAllCost <= GetMoney() and not guildRepairedItems) then
                 RepairAllItems(false);
-                self:Print(localization.personal[localization.locale]..costTextureString)
+                self:Print(L["Equipment has been repaired for "]..costTextureString)
             end
         end
     end
@@ -130,24 +129,24 @@ end
 function VendorAssistant:ShowCurrentStatus()
     local currentStatus = ""
     if self.db.profile.guildFunds then
-        currentStatus = localization.useTrue[localization.locale]
+        currentStatus = L["true"]
     else
-        currentStatus = localization.useFalse[localization.locale]
+        currentStatus = L["false"]
     end
-    self:Print(localization.status[localization.locale]..currentStatus)
+    self:Print(L["Guild repairs enabled: "]..currentStatus)
 end
 
 function VendorAssistant:Usage()
-    self:Print(localization.usage[localization.locale])
+    self:Print(L["Usage:\n/va guild - Toggle guild repairs to enable/disable\n/va status - Show the current status of guild repairs"])
 end
 
 function VendorAssistant:ToggleGuildRepairs()
     if self.db.profile.guildFunds then
         self.db.profile.guildFunds = false
-        self:Print(localization.disabled[localization.locale])
+        self:Print(L["Guild repairs are now disabled."])
     else
         self.db.profile.guildFunds = true
-        self:Print(localization.enabled[localization.locale])
+        self:Print(L["Guild repairs are now enabled."])
     end
 end
 
