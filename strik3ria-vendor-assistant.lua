@@ -77,23 +77,14 @@ end
 
 function VendorAssistant:MERCHANT_SHOW()
     -- Auto Sell Grey Items
-    local totalPrice = 0
-    for myBags = 0,4 do
-        for bagSlots = 1, C_Container.GetContainerNumSlots(myBags) do
-            CurrentItemLink = C_Container.GetContainerItemLink(myBags, bagSlots)
-            if CurrentItemLink then
-                local _, _, itemRarity, _, _, _, _, _, _, _, itemSellPrice = C_Item.GetItemInfo(CurrentItemLink)
-                local itemInfo = C_Container.GetContainerItemInfo(myBags, bagSlots)
-                if itemRarity == 0 and itemSellPrice ~= 0 then
-                    totalPrice = totalPrice + (itemSellPrice * itemInfo.stackCount)
-                    C_Container.UseContainerItem(myBags, bagSlots)
-                    PickupMerchantItem(0)
-                end
-            end
-        end
-    end
-    if totalPrice ~= 0 then
-        self:Print(L["Items were sold for "]..C_CurrencyInfo.GetCoinTextureString(totalPrice))
+    local totalPrice = GetMoney()
+    if C_MerchantFrame.GetNumJunkItems() > 0 then
+        C_MerchantFrame.SellAllJunkItems()
+        -- There is a bit of a delay after selling before PLAYER_MONEY updates. We wait a second to make sure it is updated first.
+        C_Timer.After(1, function ()
+            totalPrice = GetMoney() - totalPrice
+            self:Print(L["Items were sold for "]..C_CurrencyInfo.GetCoinTextureString(totalPrice))
+        end)
     end
 
     -- Auto Repair
