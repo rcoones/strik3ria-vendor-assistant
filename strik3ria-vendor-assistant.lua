@@ -78,7 +78,7 @@ end
 function VendorAssistant:MERCHANT_SHOW()
     -- Auto Sell Grey Items
     local totalPrice = GetMoney()
-    if C_MerchantFrame.GetNumJunkItems > 0 then
+    if C_MerchantFrame.GetNumJunkItems() > 0 then
         C_MerchantFrame.SellAllJunkItems()
         -- There is a bit of a delay after selling before PLAYER_MONEY updates. We wait a second to make sure it is updated first.
         C_Timer.After(1, function ()
